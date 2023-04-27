@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -175,6 +176,7 @@
         /* welcome end */
 
         /* Project Start */
+        
         .project-section{
           display: flex;
           flex-direction: column;
@@ -184,6 +186,33 @@
           height: 100vh;
           background-color: var(--main-gold);
         }
+        
+        .project-gallery{
+            margin: 30px;
+            <!--
+            border: 10px solid black;
+            border-radius: 20px;
+            -->
+            padding: 30px;
+            display: flex;
+            flex-flow: wrap;
+            justify-content: center;
+            max-width: 1000px;
+           
+        }
+        
+        .project-images{
+            max-width: 175px;
+            border-radius: 20px; 
+            justify-content: center;
+            margin: 10px;
+            opacity: 1;
+            transition: all 1s;
+            border: 1px solid;
+            box-shadow: 0 4px 8px 0 rgba(8, 7, 7, 0.345);
+        }
+        
+        
         /* Project End*/
 
         /* Contact Start */
@@ -209,7 +238,7 @@
           <a href="#welcome-section"><strong>About</strong></a>
         </li>
         <li>
-          <a href="#project-section"><strong>Projects</strong></a>
+          <a href="#projects"><strong>Projects</strong></a>
         </li>
         <li>
           <a href="#contact-section"><strong>Contact</strong></a>
@@ -230,24 +259,32 @@
 <!--Project Section Start-->
 <section id="projects" class="project-section">
     <h2 id="project-header">Here's some of my work</h2> 
-    <div>
-      <a
-          href="https://codepen.io/freeCodeCamp/full/zNqgVx"
-          target="_blank"
-          class="project project-tile"
-        >
-          <img
-            class="project-image"
-            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
-            alt="project"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Tribute Page
-            <span class="code">&#47;&gt;</span>
-          </p>
-      </a>
-      </div> 
+    <div class="project-gallery">
+          <div class="project-1">
+            <img class="project-images" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="project 1 photo">
+            <i class= p1 title="Project 1"></i>
+          </div>
+          <div class="project-2">
+              <img class="project-images" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="project 2 photo">
+              <i class= p2 title="Project 2"></i>
+          </div>
+          <div class="project-3">
+              <img class="project-images" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="project 3 photo">
+              <i class= p3 title="Project 3"></i>
+          </div>
+          <div class="project-4">
+              <img class="project-images" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="project 4 photo">
+              <i class= p4 title="Project 4"></i>
+          </div>
+          <div class="project-5">
+              <img class="project-images" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="project 5 photo">
+              <i class= p5 title="Project 5"></i>
+          </div>
+          <div class="project-6">
+              <img class="project-images" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="project 6 photo">
+              <i class= p6 title="Project 6"></i>
+          </div>
+    </div> 
   </section>
 <!--Project Section End-->
 
