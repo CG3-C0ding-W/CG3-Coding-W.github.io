@@ -1,41 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
         /* Custom properties/variables  */
+
         :root {
-          --main-white: #f0f0f0;
-          --main-red: #aa0505;
-          --main-blue: #265999;
-          --main-gold: #CA9703;
+            --main-white: #f0f0f0;
+            --main-red: #aa0505;
+            --main-blue: #265999;
+            --main-gold: #CA9703;
         }
 
         /* Base */
+
         * {
-          margin: 0;
-          padding: 0;
+            margin: 0;
+            padding: 0;
         }
 
         /* box-sizing and font sizing */
+
         *,
         *::before,
         *::after {
-          box-sizing: inherit;
+            box-sizing: inherit;
         }
 
         html {
-          box-sizing: border-box;
-
-          /* Set font size for easy rem calculations
+            box-sizing: border-box;
+            /* Set font size for easy rem calculations
            * default document font size = 16px, 1rem = 16px, 100% = 16px
            * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
           */
-          font-size: 62.5%;
-          scroll-behavior: smooth;
+            font-size: 62.5%;
+            scroll-behavior: smooth;
         }
 
         /* A few media query to set some font sizes at different screen sizes.
@@ -54,142 +56,145 @@
         */
 
         /* 1200px / 16px = 75em */
+
         @media (max-width: 75em) {
-          html {
-            font-size: 60%;
-          }
+            html {
+                font-size: 60%;
+            }
         }
 
         /* 980px / 16px = 61.25em */
+
         @media (max-width: 61.25em) {
-          html {
-            font-size: 58%;
-          }
+            html {
+                font-size: 58%;
+            }
         }
 
         /* 460px / 16px = 28.75em */
+
         @media (max-width: 28.75em) {
-          html {
-            font-size: 55%;
-          }
+            html {
+                font-size: 55%;
+            }
         }
 
         /* Base styles */
 
         body {
-          font-family: 'Poppins', sans-serif;
-          font-size: 1.8rem; /* 18px */
-          font-weight: 400;
-          line-height: 1.4;
-          color: black;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            /* 18px */
+            font-weight: 400;
+            line-height: 1.4;
+            color: black;
         }
 
         h1,
         h2 {
-          font-family: 'Raleway', sans-serif;
-          font-weight: 700;
-          text-align: center;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            text-align: center;
         }
 
         h1 {
-          font-size: 6rem;
+            font-size: 6rem;
         }
 
         h2 {
-          font-size: 4.2rem;
+            font-size: 4.2rem;
         }
 
         ul {
-          list-style: none;
+            list-style: none;
         }
 
         a {
-          text-decoration: none;
-          color: var(--main-gold)
+            text-decoration: none;
+            color: var(--main-gold)
         }
 
         img {
-          display: block;
-          width: 100%;
+            display: block;
+            width: 100%;
         }
 
         /* nav */
 
         .nav {
-          display: flex;
-          justify-content: flex-end;
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          background: var(--main-blue);
-          box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
-          z-index: 10;
+            display: flex;
+            justify-content: flex-end;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: var(--main-blue);
+            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+            z-index: 10;
         }
 
         .nav-list {
-          display: flex;
-          margin-right: 20rem;
+            display: flex;
+            margin-right: 2.5rem;
         }
 
         @media (max-width: 28.75em) {
-          .nav {
-            justify-content: center;
-          }
-
-          .nav-list {
-            margin: 0 1rem;
-          }
+            .nav {
+                justify-content: center;
+            }
+            .nav-list {
+                margin: 0 1rem;
+            }
         }
 
         .nav-list a {
-          display: block;
-          font-size: 2.2rem;
-          padding: 2rem;
+            display: block;
+            font-size: 2.2rem;
+            padding: 2rem;
         }
 
         .nav-list a:hover {
-          background: var(--main-red);
+            background: var(--main-red);
         }
 
         /* nav end */
 
         /* welcome */
 
-        .welcome-section{
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          height: 100vh;
-          background-color: white;
+        .welcome-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-color: white;
         }
 
-        .welcome-section > p {
-          font-size: 3rem;
-          font-weight: 200;
-          font-style: italic;
-          color: var(--main-gold);
+        .welcome-section>p {
+            font-size: 3rem;
+            font-weight: 200;
+            font-style: italic;
+            color: var(--main-gold);
         }
 
         /* welcome end */
 
         /* Project Start */
-        
-        .project-section{
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          height: 100vh;
-          background-color: var(--main-gold);
+
+        .project-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--main-gold);
         }
-        
-        .project-gallery{
+
+        .project-gallery {
             margin: 30px;
-            <!--
+            <!-- 
             border: 10px solid black;
             border-radius: 20px;
             -->
@@ -198,103 +203,136 @@
             flex-flow: wrap;
             justify-content: center;
             max-width: 1000px;
-           
         }
-        
-        .project-images{
-            max-width: 175px;
-            border-radius: 20px; 
+
+        .project-images {
+            max-width: 250px;
+            border-radius: 20px;
             justify-content: center;
-            margin: 10px;
+            margin: 25px;
             opacity: 1;
-            transition: all 1s;
+            transition: all 1s ease;
             border: 1px solid;
             box-shadow: 0 4px 8px 0 rgba(8, 7, 7, 0.345);
         }
+
+        .project-1,
+        .project-2,
+        .project-3,
+        .project-4,
+        .project-5,
+        .project-6 {
+            position: relative;
+            transition: all 1s ease;
+        }
+
+        .project-1:hover,
+        .project-2:hover,
+        .project-3:hover,
+        .project-4:hover,
+        .project-5:hover,
+        .project-6:hover,
+        img {
+            opacity: 1;
+            transform: scale(1.1, 1.1);
+        }
         
-        
+        .project-1:hover i::after,
+        .project-2:hover i::after{
+            font-family: "Handlee";
+            color: black;
+            content: attr(title);
+            position: absolute;
+            margin: 1.5rem 0 0 8rem;
+            top: 15%;
+            right: 15%;
+            opacity: 1;
+        }
+
         /* Project End*/
 
         /* Contact Start */
-        .contact-section{
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          height: 100vh;
-          background-color: var(--main-white);
+
+        .contact-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--main-white);
         }
+
         /* Contact End*/
     </style>
-  </head>
+</head>
 
 <!--NavBar Start-->
 
-  <body>
+<body>
     <nav id="navbar" class="nav">
-      <ul class="nav-list">
-        <li>
-          <a href="#welcome-section"><strong>About</strong></a>
-        </li>
-        <li>
-          <a href="#projects"><strong>Projects</strong></a>
-        </li>
-        <li>
-          <a href="#contact-section"><strong>Contact</strong></a>
-        </li>
-      </ul>
+        <ul class="nav-list">
+            <li>
+                <a href="#welcome-section"><strong>About</strong></a>
+            </li>
+            <li>
+                <a href="#projects"><strong>Projects</strong></a>
+            </li>
+            <li>
+                <a href="#contact-section"><strong>Contact</strong></a>
+            </li>
+        </ul>
     </nav>
-  
-<!--NavBar End-->
-<!--Welcome Section Start-->
 
-  <section id="welcome-section" class="welcome-section">
-    <h1>Hello, I'm Curtis</h1>
-    <p>Enjoy my portfolio</p>
-  </section>
+    <!--NavBar End-->
+    <!--Welcome Section Start-->
 
-<!--Welcome Section End-->
+    <section id="welcome-section" class="welcome-section">
+        <h1>Hello, I'm Curtis</h1>
+        <p>Enjoy my portfolio</p>
+    </section>
 
-<!--Project Section Start-->
-<section id="projects" class="project-section">
-    <h2 id="project-header">Here's some of my work</h2> 
-    <div class="project-gallery">
-          <div class="project-1">
-            <img class="project-images" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="project 1 photo">
-            <i class= p1 title="Project 1"></i>
-          </div>
-          <div class="project-2">
-              <img class="project-images" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="project 2 photo">
-              <i class= p2 title="Project 2"></i>
-          </div>
-          <div class="project-3">
-              <img class="project-images" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="project 3 photo">
-              <i class= p3 title="Project 3"></i>
-          </div>
-          <div class="project-4">
-              <img class="project-images" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="project 4 photo">
-              <i class= p4 title="Project 4"></i>
-          </div>
-          <div class="project-5">
-              <img class="project-images" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="project 5 photo">
-              <i class= p5 title="Project 5"></i>
-          </div>
-          <div class="project-6">
-              <img class="project-images" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="project 6 photo">
-              <i class= p6 title="Project 6"></i>
-          </div>
-    </div> 
-  </section>
-<!--Project Section End-->
+    <!--Welcome Section End-->
 
-<!--Contact Section Start -->
-  <section id="contact-section" class="contact-section">
-    <h3>Let's work together</h3>
-    <p>[spaceholder for email linkedIn GitHub]</p>
-  </section>
-<!--Contact Section End -->
+    <!--Project Section Start-->
+    <section id="projects" class="project-section">
+        <h2 id="project-header">Here's some of my work</h2>
+        <div class="project-gallery">
+            <div class="project-1">
+                <img class="project-images" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="project 1 photo">
+                <i class=p 1 title="Project 1: Personal Portfolio Website built using HTML, CSS, and Javascript"></i>
+            </div>
+            <div class="project-2">
+                <img class="project-images" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="project 2 photo">
+                <i class=p 2 title="Project 2"></i>
+            </div>
+            <div class="project-3">
+                <img class="project-images" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="project 3 photo">
+                <i class=p 3 title="Project 3"></i>
+            </div>
+            <div class="project-4">
+                <img class="project-images" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="project 4 photo">
+                <i class=p 4 title="Project 4"></i>
+            </div>
+            <div class="project-5">
+                <img class="project-images" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="project 5 photo">
+                <i class=p 5 title="Project 5"></i>
+            </div>
+            <div class="project-6">
+                <img class="project-images" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="project 6 photo">
+                <i class=p 6 title="Project 6"></i>
+            </div>
+        </div>
+    </section>
+    <!--Project Section End-->
+
+    <!--Contact Section Start -->
+    <section id="contact-section" class="contact-section">
+        <h3>Let's work together</h3>
+        <p>[spaceholder for email linkedIn GitHub]</p>
+    </section>
+    <!--Contact Section End -->
 
     <div id="back-wall"></div>
-    <div class="characters">
-  </body>
+    <div class="characters"></div>
+</body>
