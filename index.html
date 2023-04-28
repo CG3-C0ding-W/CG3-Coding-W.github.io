@@ -125,7 +125,7 @@
 
         /* nav */
 
-        .nav {
+        .nav-bar {
             display: flex;
             justify-content: flex-end;
             position: fixed;
@@ -143,8 +143,8 @@
         }
 
         @media (max-width: 28.75em) {
-            .nav {
-                justify-content: center;
+            .nav-bar {
+                justify-items: center;
             }
             .nav-list {
                 margin: 0 1rem;
@@ -168,7 +168,7 @@
         .welcome-section {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-items: center;
             align-items: center;
             width: 100%;
             height: 100vh;
@@ -189,7 +189,7 @@
         .project-section {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-items: center;
             align-items: center;
             width: 100%;
             height: 100vh;
@@ -203,14 +203,14 @@
             -->padding: 30px;
             display: flex;
             flex-flow: wrap;
-            justify-content: center;
+            justify-items: center;
             max-width: 1000px;
         }
 
         .project-images {
             max-width: 250px;
             border-radius: 20px;
-            justify-content: center;
+            justify-items: center;
             margin: 25px;
             opacity: 1;
             transition: all 1s ease;
@@ -273,7 +273,7 @@
         .contact-section {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-items: center;
             align-items: center;
             width: 100%;
             height: 100vh;
@@ -282,7 +282,7 @@
 
         .contact-img {
             display: inline;
-            justify-content: center;
+            justify-items: center;
             margin: 5rem 0 0 7rem;
             height: 50px;
             width: 50px;
@@ -295,7 +295,7 @@
 <!--NavBar Start-->
 
 <body>
-    <nav id="navbar" class="nav">
+    <nav id="navbar" class="nav-bar">
         <ul class="nav-list">
             <li>
                 <a href="#welcome-section"><strong>About</strong></a>
